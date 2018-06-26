@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="home-bg">
+<head>
+<meta charset="utf-8">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+	<!--<link rel="stylesheet" href="css/custom.css" /> -->
+	<link rel="stylesheet" href="css/blue.min.css" />
+	<script type="text/javascript" src="cordova.js"></script>
+	<!--<script src="http://192.168.0.3:8080/target/target-script-min.js#anonymous"></script> -->
+	<script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jqm_defaults.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd4SiJLAaOZK_VxepunQo0D79i-sxQTMU"></script>
+	<script type="text/javascript" src="js/main.js "></script>
+
+</head>
+<body>
+	<!-- The home page -->
+	<div data-role="page" id="home" data-theme="a" data-position="fixed">
+		<div data-role="header">
+			<!-- Calling the menu -->
+			<!--
+			<div data-role="header">
+				<a href="#menu" data-icon="bars" data-iconspos class="" data-theme="a" title="Menu">
+				<span class="ui-btn-inner"><span class="ui-btn-text">Menu</span>
+				<span class="ui-icon-bars ui-icon-shadow">&nbsp;</span></span></a>
+			</div>
+			-->
+			<!-- -->
+			<h1>Alarm</h1>
+		</div>
+
+		<!-- Content on the page -->
+		<div data-role="content">
+			<form>
+				<label for="search-1">Destination:</label>
+     		<input type="search" name="destination" id="dest" value="University of Lincoln">
+				<br>
+
+				<label for="time-1">Prep time:</label>
+				<input type="time" data-clear-btn="false" name="prep_time" id="prep" value="00:10">
+				<br>
+
+				<label for="time-2">Desired time of arrival:</label>
+				<input type="time" data-clear-btn="false" name="arrive_time" id="arrive" value="09:00">
+				<br>
+
+				<label for="alarm" id="alarm">Alarm time: </label>
+				<br>
+
+				<!-- Button to start the working out -->
+				<a id="working" class="ui-btn ui-corner-all">Set alarm</a>
+				<div class="loader" id="loader"></div>
+	 		</form>
+		<!-- -->
+
+		<!-- A way to stop the alarm -->
+		<div data-role="content" id="alarmStop" style="display:none">
+			<a id="alarmStp" class="ui-btn ui-corner-all">Stop alarm</a>
+			<a id="alarmSnz" class="ui-btn ui-corner-all">Snooze</a>
+		</div>
+		<!-- -->
+
+		<!-- A navbar -->
+		<div data-theme="a" data-role="footer" data-position="fixed" data-tap-toggle="false" data-id="common_footer">
+			<div data-role="navbar" data-theme="a" data-position="fixed">
+				<ul>
+					<li><a href="#home" data-transition="pop" data-direction="reverse" data-icon="clock" class="ui-btn-active ui-state-persist">Alarm</a></li>
+					<li><a href="#alarms" data-transition="pop" data-direction="reverse" data-icon="delete" class="ui-btn-active ui-state-persist">Alarms</a></li>
+					<li><a href="#analytics" data-transition="pop" data-direction="reverse" data-icon="info" class="ui-btn-active ui-state-persist">Analytics</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- -->
+		</div>
+	</div>
+	<!-- -->
+
+		<!-- The alarms page -->
+		<div data-role="page" id="alarms" data-theme="a">
+			<div data-role="header" data-position="fixed">
+				<!-- Calling the menu -->
+				<!--
+				<div data-role="header">
+					<a href="#menu" data-icon="bars" data-iconspos class="" data-theme="a" title="Menu">
+					<span class="ui-btn-inner"><span class="ui-btn-text">Menu</span>
+					<span class="ui-icon-bars ui-icon-shadow">&nbsp;</span></span></a>
+				</div>
+				-->
+				<!-- -->
+				<h1>Alarms</h1>
+			</div>
+
+			<!-- Content on the page -->
+			<div data-role="content" id="alarmCon">
+				<ul data-role="listview" id="alarmsList"></ul>
+				<a id="alarmsDel" class="ui-btn ui-corner-all">Clear alarms</a>
+			</div>
+
+			<!-- A navbar -->
+			<div data-theme="a" data-role="footer" data-position="fixed" data-tap-toggle="false" data-id="common_footer">
+				<div data-role="navbar" data-theme="a" data-position="fixed">
+					<ul>
+						<li><a href="#home" data-transition="pop" data-direction="reverse" data-icon="clock" class="ui-btn-active ui-state-persist">Alarm</a></li>
+						<li><a href="#alarms" data-transition="pop" data-direction="reverse" data-icon="delete" class="ui-btn-active ui-state-persist">Alarms</a></li>
+						<li><a href="#analytics" data-transition="pop" data-direction="reverse" data-icon="info" class="ui-btn-active ui-state-persist">Analytics</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- -->
+		</div>
+		<!-- -->
+
+		<!-- The Analytics page -->
+		<div data-role="page" id="analytics" data-url="map-page" data-theme="a">
+			<div data-role="header" data-position="fixed">
+				<h1>Analytics</h1>
+			</div>
+
+			<!-- Might have problems from adding div -->
+		<div data-role="content" id="mapcontent">
+			<form>
+				<br>
+				<label for="alarmHist">Previous alarms:</label>
+				<div id="oldAlarms" class="ui-field-contain">
+					<select name="alarmHistDrop" id="alarmHistDrop"></select>
+				</div>
+				<fieldset>
+					<label for="destHist" id="destHist"></label>
+					<label for="prepHist" id="prepHist"></label>
+					<label for="DesiHist" id="DesiHist"></label>
+					<label for="AlarmHist" id="AlarmHist"></label>
+				<fieldset>
+				<br>
+			</form>
+		</div>
+
+		<!-- http://demos.jquerymobile.com/1.4.0/map-geolocation/ -->
+		<div role="main" id="map-canvas" data-position="fixed"></div>
+
+			<!-- A navbar -->
+			<div data-theme="a" data-role="footer" data-position="fixed" data-tap-toggle="false" data-id="common_footer">
+				<div data-role="navbar" data-theme="a" data-position="fixed" >
+					<ul>
+						<li><a href="#home" data-transition="pop" data-direction="reverse" data-icon="clock" class="ui-btn-active ui-state-persist">Alarm</a></li>
+						<li><a href="#alarms" data-transition="pop" data-direction="reverse" data-icon="delete" class="ui-btn-active ui-state-persist">Alarms</a></li>
+						<li><a href="#analytics" data-transition="pop" data-direction="reverse" data-icon="info" class="ui-btn-active ui-state-persist">Analytics</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- -->
+		</div>
+</body>
+</html>

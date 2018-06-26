@@ -1,0 +1,52 @@
+{
+  "_from": "git+https://github.com/jkhax0r/cordova-plugin-wakeuptimer.git",
+  "_id": "cordova-plugin-wakeuptimer-jk@1.0.2",
+  "_inBundle": false,
+  "_location": "/cordova-plugin-wakeuptimer-jk",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/jkhax0r/cordova-plugin-wakeuptimer.git",
+    "rawSpec": "https://github.com/jkhax0r/cordova-plugin-wakeuptimer.git",
+    "saveSpec": "git+https://github.com/jkhax0r/cordova-plugin-wakeuptimer.git",
+    "fetchSpec": "https://github.com/jkhax0r/cordova-plugin-wakeuptimer.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/jkhax0r/cordova-plugin-wakeuptimer.git#195c80309af29b76b93ba05de03029d16e845d2e",
+  "_spec": "https://github.com/jkhax0r/cordova-plugin-wakeuptimer.git",
+  "_where": "C:\\Users\\james\\Desktop\\Lazy student",
+  "author": {
+    "name": "jkhax0r"
+  },
+  "bugs": {
+    "url": "https://github.com/jkhax0r/cordova-plugin-wakeuptimer/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "org.jk.cordova.wakeupplugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Wakeup Plugin",
+  "homepage": "https://github.com/jkhax0r/cordova-plugin-wakeuptimer#readme",
+  "keywords": [
+    "sleep",
+    "wakeup",
+    "timer",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-wakeuptimer-jk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkhax0r/cordova-plugin-wakeuptimer.git"
+  },
+  "version": "1.0.2"
+}

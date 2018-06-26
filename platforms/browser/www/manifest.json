@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Lazy student alarm",
+  "short_name": "Lazy student alarm",
+  "version": "com.lazystudent.alarm",
+  "description": "An alarm that adjusts on its own.",
+  "author": "James Hay",
+  "icons": [],
+  "orientation": "portrait",
+  "start_url": "index.html"
+}

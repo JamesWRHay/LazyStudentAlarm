@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.lazystudent.alarm" version="1.0.0" versionCode="1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Lazy student alarm</name>
+    <description>
+        An alarm that adjusts on its own.
+    </description>
+    <author email="your email" href="website">
+        James Hay
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="keepRunning" value="false" />
+    <preference name="AllowInlineMediaPlayback" value="true" />
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="portrait" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="true" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="true" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <plugin name="cordova-plugin-camera">
+        <variable name="CAMERA_USAGE_DESCRIPTION" value="To take photos" />
+        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="To get photos" />
+    </plugin>
+    <plugin name="cordova-plugin-media-capture">
+        <param name="CAMERA_USAGE_DESCRIPTION" value="We'd like to access your camera to let you take a photo" />
+        <param name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="We'd like to access your photo library to let you pick a photo" />
+        <param name="MICROPHONE_USAGE_DESCRIPTION" value="We'd like to access your microphone to let you record an audio" />
+    </plugin>
+    <plugin name="cordova-plugin-device" />
+    <plugin name="cordova-plugin-device-orientation" />
+    <plugin name="cordova-plugin-dialogs" />
+    <plugin name="cordova-plugin-vibration" />
+    <plugin name="cordova-plugin-inappbrowser" />
+    <plugin name="cordova-plugin-network-information" />
+    <plugin name="cordova-plugin-console" />
+    <plugin name="cordova-plugin-file" />
+    <plugin name="cordova-plugin-geolocation" version="2.1.0" />
+    <plugin name="de.appplant.cordova.plugin.local-notification" />
+    <access origin="*" />
+    <plugin name="cordova-plugin-whitelist" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <engine name="browser" spec="~5.0.3" />
+    <plugin name="cordova-plugin-background-mode" spec="~0.7.2" />
+    <preference name="loadUrlTimeoutValue" value="700000" />
+    <gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="false">
+      <array>
+        <string>NSLocationAlwaysUsageDescription</string>
+      </array>
+    </gap:config-file>
+</widget>
